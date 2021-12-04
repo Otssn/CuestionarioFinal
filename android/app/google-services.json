@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "279806365211",
+    "project_id": "encuestafinal-83a40",
+    "storage_bucket": "encuestafinal-83a40.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:279806365211:android:344cec80007a62c14932be",
+        "android_client_info": {
+          "package_name": "com.example.cuestionario_final"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "279806365211-utink7k9o16qk01o1grse4p5vj17fb9o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.cuestionario_final",
+            "certificate_hash": "4ec7ddc0e15be7c3d2d1dcb98fccc393df618f78"
+          }
+        },
+        {
+          "client_id": "279806365211-abs1kuo1dq088jn1m8qo3upofjiiaeo6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBwxWU4zBAfcSKnx8qWWLNJl5HD6DsipY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "279806365211-abs1kuo1dq088jn1m8qo3upofjiiaeo6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

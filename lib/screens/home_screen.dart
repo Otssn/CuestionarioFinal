@@ -52,6 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: Text("Cuestionario"),
         centerTitle: true,
+        backgroundColor: Colors.lightBlue,
         actions: <Widget>[
           IconButton(
               onPressed: () {
@@ -237,7 +238,8 @@ class _HomeScreenState extends State<HomeScreen> {
             style: ButtonStyle(
               backgroundColor: MaterialStateProperty.resolveWith<Color>(
                   (Set<MaterialState> states) {
-                return Color(0xFF9347);
+                return Colors.lightBlue;
+                ;
               }),
             ),
             onPressed: () => _validate() ? _save() : Container()),
@@ -254,7 +256,7 @@ class _HomeScreenState extends State<HomeScreen> {
             style: ButtonStyle(
               backgroundColor: MaterialStateProperty.resolveWith<Color>(
                   (Set<MaterialState> states) {
-                return Color(0xFF9347);
+                return Colors.lightBlue;
               }),
             ),
             onPressed: () => _validate() ? _save() : Container()),
@@ -328,6 +330,14 @@ class _HomeScreenState extends State<HomeScreen> {
       );
       return;
     }
+    await showAlertDialog(
+      context: context,
+      title: 'Exito',
+      message: 'Se ha guardado con exito',
+      actions: <AlertDialogAction>[
+        AlertDialogAction(key: null, label: 'Aceptar')
+      ],
+    );
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(

@@ -31,6 +31,7 @@ class _LoginScreenState extends State<LoginScreen> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
+                  _showLogo(),
                   _showButtom(),
                 ],
               ),
@@ -45,15 +46,16 @@ class _LoginScreenState extends State<LoginScreen> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        ElevatedButton(
-            child: Text('Iniciar sesión con google'),
+        ElevatedButton.icon(
+            label: Text('Iniciar sesión con google'),
             style: ButtonStyle(
               backgroundColor: MaterialStateProperty.resolveWith<Color>(
                   (Set<MaterialState> states) {
-                return Color(0xFF9347);
+                return Colors.black;
               }),
             ),
-            onPressed: () => _login()),
+            onPressed: () => _login(),
+            icon: Icon(Icons.login)),
       ],
     );
   }
@@ -105,6 +107,13 @@ class _LoginScreenState extends State<LoginScreen> {
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(builder: (context) => HomeScreen(token: token)),
+    );
+  }
+
+  Widget _showLogo() {
+    return Image(
+      image: AssetImage('assets/logo.png'),
+      width: 250,
     );
   }
 }

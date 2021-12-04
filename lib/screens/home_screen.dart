@@ -65,15 +65,6 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Container(
           child: Column(
             children: <Widget>[
-              ClipRRect(
-                borderRadius: BorderRadius.circular(75),
-                child: FadeInImage(
-                  placeholder: AssetImage('assets/logo.png'),
-                  image: NetworkImage(widget.token.user.imageFullPath),
-                  height: 150,
-                  fit: BoxFit.cover,
-                ),
-              ),
               _showEmail(),
               _showqualification(),
               _showTheBest(),
@@ -351,13 +342,12 @@ class _HomeScreenState extends State<HomeScreen> {
     var domain = email.split('@');
     var dom = domain.length;
     print(dom);
-    if (domain[1] == "correo.itm.edu.co") {
+    if (dom != 2) {
+      return false;
+    } else if (domain[1] == "correo.itm.edu.co") {
       return true;
-    } else if (dom != 2) {
-      return false;
-    } else {
-      return false;
     }
+    return false;
   }
 
   void _logOut() {

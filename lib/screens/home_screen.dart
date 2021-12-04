@@ -79,22 +79,27 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Widget _showqualification() {
-    return Center(
-      child: RatingBar.builder(
-        initialRating: _qualification + 0.0,
-        minRating: 1,
-        direction: Axis.horizontal,
-        allowHalfRating: false,
-        itemCount: 5,
-        itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
-        itemBuilder: (context, _) => Icon(
-          Icons.star,
-          color: Colors.amber,
+    return Column(
+      children: [
+        Text('Calificacion del curso'),
+        Center(
+          child: RatingBar.builder(
+            initialRating: _qualification + 0.0,
+            minRating: 1,
+            direction: Axis.horizontal,
+            allowHalfRating: false,
+            itemCount: 5,
+            itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
+            itemBuilder: (context, _) => Icon(
+              Icons.star,
+              color: Colors.amber,
+            ),
+            onRatingUpdate: (rating) {
+              _qualification = rating.round();
+            },
+          ),
         ),
-        onRatingUpdate: (rating) {
-          _qualification = rating.round();
-        },
-      ),
+      ],
     );
   }
 
